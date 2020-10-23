@@ -1,0 +1,48 @@
+### Register
+POST http://localhost:8000/api/register HTTP/1.1
+content-type: application/json
+
+{
+    "name": "amigo5s",
+    "email": "amigos@hot.com",
+    "password": "amigos5"
+}
+
+### Login
+POST http://localhost:8000/api/login  HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "free6@freecodecamp.com",
+    "password": "freecode"
+}
+
+####################################
+############ SURVEY ################
+####################################
+### obtener todos los preguntas por usuario
+GET http://localhost:8000/api/survey HTTP/1.1
+
+### obtener solo unas pregunta por usuario
+GET http://localhost:8000/api/survey/5f934df700ae1fc4001d8745 HTTP/1.1
+
+### crear preguntas 
+POST http://localhost:8000/api/survey HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Survey222   893",
+    "description": " amigos la primera"
+}
+
+### actualizar las preguntas 
+PUT  http://localhost:8000/api/survey/5f934df700ae1fc4001d8745  HTTP/1.1
+Content-Type: application/json
+
+{
+    "name": "Survey 0",
+    "description": "lorem ipsum something"
+}
+### DELETE UN SURVEY
+DELETE  http://localhost:8000/api/survey/5f934df700ae1fc4001d8745 HTTP/1.1
+
